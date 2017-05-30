@@ -154,7 +154,7 @@ var Axes = require('../geometry/Axes');
 
         // render properties
         var defaultFillStyle = (body.isStatic ? '#2e2b44' : Common.choose(['#006BA6', '#0496FF', '#FFBC42', '#D81159', '#8F2D56'])),
-            defaultStrokeStyle = Common.shadeColor(defaultFillStyle, -20);
+            defaultStrokeStyle = '#000';
         body.render.fillStyle = body.render.fillStyle || defaultFillStyle;
         body.render.strokeStyle = body.render.strokeStyle || defaultStrokeStyle;
         body.render.sprite.xOffset += -(body.bounds.min.x - body.position.x) / (body.bounds.max.x - body.bounds.min.x);
@@ -626,6 +626,7 @@ var Axes = require('../geometry/Axes');
      * @return {}
      */
     var _totalProperties = function(body) {
+        // from equations at:
         // https://ecourses.ou.edu/cgi-bin/ebook.cgi?doc=&topic=st&chap_sec=07.2&page=theory
         // http://output.to/sideway/default.asp?qno=121100087
 
@@ -1109,7 +1110,7 @@ var Axes = require('../geometry/Axes');
      *
      * @property render.lineWidth
      * @type number
-     * @default 1.5
+     * @default 0
      */
 
     /**
