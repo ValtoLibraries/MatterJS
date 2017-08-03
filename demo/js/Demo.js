@@ -27,6 +27,8 @@
         inline: false,
         preventZoom: true,
         resetOnOrientation: true,
+        routing: true,
+        startExample: 'mixed',
         examples: [
             {
                 name: 'Air Friction',
@@ -119,6 +121,18 @@
                 sourceLink: sourceLinkRoot + '/concave.js'
             },
             {
+                name: 'Constraints',
+                id: 'constraints',
+                init: Example.constraints,
+                sourceLink: sourceLinkRoot + '/constraints.js'
+            },
+            {
+                name: 'Double Pendulum',
+                id: 'doublePendulum',
+                init: Example.doublePendulum,
+                sourceLink: sourceLinkRoot + '/doublePendulum.js'
+            },
+            {
                 name: 'Events',
                 id: 'events',
                 init: Example.events,
@@ -159,6 +173,12 @@
                 id: 'newtonsCradle',
                 init: Example.newtonsCradle,
                 sourceLink: sourceLinkRoot + '/newtonsCradle.js'
+            },
+            {
+                name: 'Ragdoll',
+                id: 'ragdoll',
+                init: Example.ragdoll,
+                sourceLink: sourceLinkRoot + '/ragdoll.js'
             },
             {
                 name: 'Pyramid',

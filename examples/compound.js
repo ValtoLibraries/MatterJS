@@ -20,10 +20,9 @@ Example.compound = function() {
         element: document.body,
         engine: engine,
         options: {
-            width: Math.min(document.documentElement.clientWidth, 800),
-            height: Math.min(document.documentElement.clientHeight, 600),
+            width: 800,
+            height: 600,
             showAxes: true,
-            showPositions: true,
             showConvexHulls: true
         }
     });
@@ -61,7 +60,7 @@ Example.compound = function() {
     var constraint = Constraint.create({
         pointA: { x: 400, y: 100 },
         bodyB: compoundBodyB,
-        pointB: { x: 0, y: -50 }
+        pointB: { x: 0, y: 0 }
     });
 
     World.add(world, [
